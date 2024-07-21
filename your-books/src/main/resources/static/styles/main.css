@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #f593d1;
+}
+#icon{
+    color: #f593d1;
+    margin-right: 15px;
+    font-size: 35px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #e6eef5;
+}
+
+.main-content{
+    flex: 1;
+}
+
+.logo,
+#toggle-icon{
+    color: #f593d1;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.app-name{
+    font-size: 23px;
+}
+
+.menu-item{
+    width: 100%;
+    padding: 25px;
+    font-size: 18px;
+    border-bottom: 1px #6d6d6d solid;
+    text-align: center;
+    display: none;
+}
+
+.expanded > .menu-item{
+    display: block;
+}
+
+.menu-logo-container,
+.menu-toggle {
+    display: block;
+    padding: 16px 32px;
+    font-size: 20px;
+}
+
+.footer{
+    padding: 8px;
+    text-align: left;
+}
+
+span{
+    color: black;
+    margin-left: 7px;
+}
+
+@media only screen and (min-width: 992px) {
+    .menu-toggle{
+        display: none;
+    }
+
+    .menu-item {
+        display: block;
+        width: auto;
+        border-bottom: 0;
+    }
+
+    .menu-logo-container {
+        flex: 1;
+    }
+
+    .main-content,
+    .menu {
+        align-self: center;
+        width: 960px;
+    }
+}
+
+.jumbotron{
+    background-image: url("../img/pexels-ann-h-45017-1765033.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 6rem;
+    text-align: center;
+}
+
+.jumbotron-header{
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.jumbotron-description{
+    font-size: 1.7rem;
+
+}
+
+.list-heading,
+.list-description {
+    text-align: center;
+    margin: 16px 0;
+    color: #080808;
+}
+
+.books-list{
+    list-style-type: none;
+}
+
+.books-list-item {
+    margin-bottom: 16px;
+    display: flex;
+    border: 1px #6d6d6d solid;
+}
+
+.books-list-item-poster{
+    display: block;
+    max-width: 200px;
+}
+
+.books-list-item-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+
+}
+
+.books-list-item-content > * {
+    margin: 8px 0;
+}
+
+.books-list-item-title {
+    font-size: 1.6rem;
+}
+
+.books-list-item-rating{
+    font-size: 1.6rem;
+}
+.fa-star{
+    color: #080808;
+}
+
+.title{
+    color: #080808;
+}
