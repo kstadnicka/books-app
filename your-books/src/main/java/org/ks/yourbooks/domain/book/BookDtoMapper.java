@@ -7,7 +7,8 @@ public class BookDtoMapper {
         return new BookDto(
                 book.getId(),
                 book.getTitle(),
-                book.getOriginalTitle(),
+                book.getAuthor(),
+                book.getPublisher(),
                 book.getReleaseYear(),
                 book.getCategory().getName(),
                 book.getPromoted()

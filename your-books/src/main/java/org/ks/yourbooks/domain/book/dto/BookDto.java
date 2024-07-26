@@ -6,15 +6,17 @@ import lombok.Data;
 public class BookDto {
     private Long id;
     private String title;
-    private String originalTitle;
+    private String author;
+    private String publisher;
     private Integer releaseYear;
     private String category;
     private Boolean promoted;
 
-    public BookDto(Long id, String title, String originalTitle, Integer releaseYear, String category, Boolean promoted) {
+    public BookDto(Long id, String title, String author, String publisher, Integer releaseYear, String category, Boolean promoted) {
         this.id = id;
         this.title = title;
-        this.originalTitle = originalTitle;
+        this.author = author;
+        this.publisher = publisher;
         this.releaseYear = releaseYear;
         this.category = category;
         this.promoted = promoted;

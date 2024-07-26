@@ -163,3 +163,93 @@ span{
 .title{
     color: #080808;
 }
+
+.book-summary{
+    display: flex;
+    margin-top: 16px;
+}
+
+.book-summary-cover{
+    object-fit: contain;
+    max-width: 200px;
+}
+
+.book-summary-info{
+    margin-left: 16px;
+}
+
+.book-summary-author{
+    color: #080808;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.book-summary-item{
+
+    margin: 8px 0;
+    color: #080808;
+}
+
+.book-summary-title{
+    font-size: 2rem;
+    color: #080808;
+}
+
+.book-rating-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 200px;
+}
+
+.book-rating-form > p{
+    text-align: center;
+    margin-bottom: 16px;
+    color: #080808;
+}
+
+.number-of-ratings{
+    color: #080808;
+}
+
+.book-rating-value {
+    font-size: 4rem;
+    text-align: center;
+    color: #080808;
+}
+
+.book-rating-button{
+    background-color: #ffc107;
+    border: 0;
+    padding: 4px;
+    font-size: 1.6rem;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+.book-section-heading{
+    color: #080808;
+    font-style: italic;
+}
+
+.book-rating-button:hover{
+    opacity: 1;
+}
+
+.book-rating-container >*{
+    margin: 8px 0;
+}
+
+.book-section{
+    margin-top: 16px;
+    padding: 16px;
+    border: 1px #6d6d6d solid;
+}
+
+.login{
+    color: #080808;
+}
+
+
+
