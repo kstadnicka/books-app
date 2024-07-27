@@ -14,6 +14,8 @@ public class Book {
     private Integer releaseYear;
     private String publisher;
     private String author;
+    private String shortDescription;
+    private String description;
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;

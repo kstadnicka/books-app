@@ -10,6 +10,8 @@ public class BookDtoMapper {
                 book.getAuthor(),
                 book.getPublisher(),
                 book.getReleaseYear(),
+                book.getShortDescription(),
+                book.getDescription(),
                 book.getCategory().getName(),
                 book.getPromoted()
         );
