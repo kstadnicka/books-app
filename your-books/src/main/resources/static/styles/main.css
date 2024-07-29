@@ -246,10 +246,30 @@ span{
     padding: 16px;
     border: 1px #6d6d6d solid;
 }
+.description{
+    color: #080808;
+}
 
 .login{
     color: #080808;
 }
 
+.input{
+    color: #f593d1;
+}
 
+.error-container{
+    margin: 32px auto;
+}
 
+.error-container > * {
+    display: block;
+    text-align: center;
+    color: #080808;
+}
+
+.error-header
+.error-icon{
+    font-size: 2rem;
+    margin: 16px 0;
+}

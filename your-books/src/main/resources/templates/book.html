@@ -4,11 +4,11 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout}">
 <head>
-    <title th:text="|${book.title} - YourBooks|">Tytuł książki - Your Books</title>
+    <title th:if="${book}" th:text="|${book.title} - YourBooks|">Tytuł książki - Your Books</title>
 </head>
 <body>
 <div class="container">
-    <main class="main-content" layout:fragment="content">
+    <main th:if="${book}" class="main-content" layout:fragment="content">
         <section class="book">
             <div class="book-summary">
                 <img src="../static/img/poster-placeholder.png"
@@ -33,7 +33,7 @@
                 <h2 class="book-section-heading">Ocena</h2>
                 <div>
                     <p class="book-rating-value" th:text="${avgRating}"8.5</p>
-                    <p style="text-align: center">Liczba ocen: 215</p>
+                    <p class="number-of-ratings" style="text-align: center">Liczba ocen: 215</p>
                 </div>
                 <form action="#" class="book-rating-form">
                     <p>Twoja ocena</p>
@@ -46,12 +46,12 @@
                         <button class="book-rating-button"><i class="fa-regular fa-star"></i></button>
                     </div>
                 </form>
-                <p><a href="#" class="login">Zaloguj się</a>, aby oddać głos</p>
+                <p class="login"><a class="input" href="#">Zaloguj się</a>, aby oddać głos</p>
             </div>
         </section>
         <section class="book-section">
             <h2 class="book-section-heading">Opis</h2>
-            <p th:text="${book.description}">Pogłoski o Dziewczynie z Bagien latami krążyły po Barkley Cove, sennym miasteczku u wybrzeży Karoliny Północnej. Dlatego pod koniec 1969 roku, gdy na mokradłach znaleziono ciało przystojnego Chase’a Andrewsa, miejscowi zwrócili się przeciwko Kyi Clark, zwanej Dziewczyną z Bagien.
+            <p class="description" th:text="${book.description}">Pogłoski o Dziewczynie z Bagien latami krążyły po Barkley Cove, sennym miasteczku u wybrzeży Karoliny Północnej. Dlatego pod koniec 1969 roku, gdy na mokradłach znaleziono ciało przystojnego Chase’a Andrewsa, miejscowi zwrócili się przeciwko Kyi Clark, zwanej Dziewczyną z Bagien.
                 Lecz Kya nie jest taka, jak o niej szepczą. Wrażliwa i inteligentna, zdołała sama przetrwać wiele lat na bagnach, które nazywa domem, choć jej ciało tęskniło za dotykiem i miłością. Przyjaźni szukała u mew, a wiedzę czerpała z natury. Kiedy dzikie piękno dziewczyny intryguje dwóch młodych mężczyzn z miasteczka, Kya otwiera się na nowe doznania — i dzieją się rzeczy niewyobrażalne.
                 Nie potrafię wyrazić, jak bardzo ujęła mnie ta książka! Chciałam, aby opowieść trwała bez końca!
                 REESE WITHERSPOON</p>
