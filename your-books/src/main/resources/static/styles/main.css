@@ -190,6 +190,12 @@ span{
     color: #080808;
 }
 
+.author,
+.year{
+    color: #080808;
+    font-style: italic;
+}
+
 .book-summary-title{
     font-size: 2rem;
     color: #080808;

@@ -24,4 +24,10 @@ public class BookService {
     public Optional<BookDto> findBookById(Long id) {
         return bookRepository.findById(id).map(BookDtoMapper::map);
     }
+
+    public List<BookDto> findBookByCategoryName(String category){
+        return bookRepository.findAllByCategory_NameIgnoreCase(category).stream().
+                map(BookDtoMapper::map)
+                .toList();
+    }
 }

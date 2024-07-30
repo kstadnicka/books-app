@@ -21,8 +21,8 @@
                         <h3 class="books-list-item-title">
                             <a href="#" th:href="@{|/book/${book.id}|}" th:text="${book.title}">Tytuł książki</a>
                         </h3>
-                        <h4 th:text="${book.author}">Autor</h4>
-                        <p th:text="${book.releaseYear}">2012</p>
+                        <h4 class="author" th:text="${book.author}">Autor</h4>
+                        <p class="year" th:text="${book.releaseYear}">2012</p>
                     </div>
                     <div class="books-list-item-rating">
                         <i class="fas fa-star"></i>
