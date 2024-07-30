@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Kategorie książek</title>
+</head>
+<body>
+<main class="main-content" layout:fragment="content">
+    <h2 class="list-heading">Kategorie książek</h2>
+    <p class="list-description">
+        Poniżej znajduje się lista kategorii książek dostępnych w naszym katalogu.
+        Znajdz coś co Cię interesuje!
+    </p>
+    <ul class="category-list">
+        <li th:each="category: ${categories}">
+            <a th:href="@{|/kategoria/${category.name}|}"
+               th:text="${category.name}">
+                Comedy
+            </a>
+        </li>
+    </ul>
+</main>
+</body>
+</html>
