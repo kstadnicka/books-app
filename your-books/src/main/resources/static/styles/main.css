@@ -279,9 +279,58 @@ span{
     font-size: 2rem;
     margin: 16px 0;
 }
+.list-border {
+    margin: 10px 0;
+    list-style: none;
+}
+
+.list-border > li {
+    font-size: 1.2rem;
+    padding: 8px;
+    text-align: center;
+}
 
 .category-list > li {
     font-size: 1.2rem;
     padding: 8px;
     text-align: center;
+}
+
+textarea{
+    font-family: inherit;
+}
+
+.mc-form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 32px;
+}
+
+.mc-form > *{
+    margin-top: 8px;
+}
+
+.mc-form > input,
+.mc-form > textarea,
+.mc-form > button{
+    font-size: 1.2rem;
+    color: #080808;
+    padding: 8px;
+}
+.description-text,
+.category-name{
+    color: #080808;
+}
+
+.mc-form > button{
+    margin-top: 16px;
+    background-color: white;
+    color: #f593d1;
+    border: none;
+}
+
+.notification-bar{
+    text-align: center;
+    background-color: #f593d1;
+    padding: 8px 0;
 }

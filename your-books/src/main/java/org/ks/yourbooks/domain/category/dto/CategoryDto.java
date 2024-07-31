@@ -13,4 +13,7 @@ public class CategoryDto {
         this.name = name;
         this.description = description;
     }
+
+    public CategoryDto() {
+    }
 }

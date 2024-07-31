@@ -2,6 +2,7 @@ package org.ks.yourbooks.domain.category;
 
 import org.ks.yourbooks.domain.category.dto.CategoryDto;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -24,5 +25,13 @@ public class CategoryService {
         return StreamSupport.stream(categoryRepository.findAll().spliterator(), false)
                 .map(CategoryDtoMapper::map)
                 .toList();
+    }
+
+    @Transactional
+    public void addCategory(CategoryDto category){
+        Category categoryToSave = new Category();
+        categoryToSave.setName(category.getName());
+        categoryToSave.setDescription(category.getDescription());
+        categoryRepository.save(categoryToSave);
     }
 }
