@@ -13,8 +13,12 @@ public class BookDto {
     private String description;
     private String category;
     private Boolean promoted;
+    private String poster;
 
-    public BookDto(Long id, String title, String author, String publisher, Integer releaseYear, String shortDescription, String description, String category, Boolean promoted) {
+    public BookDto(Long id, String title, String author,
+                   String publisher, Integer releaseYear,
+                   String shortDescription, String description,
+                   String category, Boolean promoted, String poster) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -24,5 +28,6 @@ public class BookDto {
         this.description = description;
         this.category = category;
         this.promoted = promoted;
+        this.poster = poster;
     }
 }

@@ -20,5 +20,6 @@ public class Book {
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
     private Boolean promoted;
+    private String poster;
 
 }

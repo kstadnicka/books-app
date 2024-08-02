@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    color: white;
+    color: black;
 }
 
 body{
@@ -27,6 +27,7 @@ a {
 
 .main-content{
     flex: 1;
+    color: #080808;
 }
 
 .logo,
@@ -108,11 +109,12 @@ span{
 .jumbotron-header{
     font-size: 3rem;
     margin: 1rem 0;
+    color: white;
 }
 
 .jumbotron-description{
     font-size: 1.7rem;
-
+    color: white;
 }
 
 .list-heading,
@@ -312,11 +314,22 @@ textarea{
 
 .mc-form > input,
 .mc-form > textarea,
-.mc-form > button{
+.mc-form > button,
+.mc-form > select{
     font-size: 1.2rem;
     color: #080808;
     padding: 8px;
 }
+
+.mc-form >input[type=checkbox]{
+    transform: scale(1.5);
+    margin-left: 5px;
+}
+
+.mc-form > input[type=file]{
+    color: black;
+}
+
 .description-text,
 .category-name{
     color: #080808;

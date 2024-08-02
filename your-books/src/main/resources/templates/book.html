@@ -11,8 +11,8 @@
     <main th:if="${book}" class="main-content" layout:fragment="content">
         <section class="book">
             <div class="book-summary">
-                <img src="../static/img/poster-placeholder.png"
-                     th:src="@{/img/poster-placeholder.png}"
+                <img th:if="${book.poster != null}" th:src="@{/img/{poster}(poster=${book.poster})}" />
+                <img th:if="${book.poster == null}" th:src="@{img/poster-placeholder.png}"
                      alt="tytuł książki"
                      th:alt="${book.title}"
                      class="book-summary-cover"/>

@@ -13,7 +13,7 @@ public class BookDtoMapper {
                 book.getShortDescription(),
                 book.getDescription(),
                 book.getCategory().getName(),
-                book.getPromoted()
-        );
+                book.getPromoted(),
+                book.getPoster());
     }
 }
