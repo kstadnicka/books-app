@@ -296,37 +296,38 @@ span{
     font-size: 1.2rem;
     padding: 8px;
     text-align: center;
+    list-style: none;
 }
 
 textarea{
     font-family: inherit;
 }
 
-.mc-form{
+.bc-form{
     display: flex;
     flex-direction: column;
     margin: 0 32px;
 }
 
-.mc-form > *{
+.bc-form > *{
     margin-top: 8px;
 }
 
-.mc-form > input,
-.mc-form > textarea,
-.mc-form > button,
-.mc-form > select{
+.bc-form > input,
+.bc-form > textarea,
+.bc-form > button,
+.bc-form > select{
     font-size: 1.2rem;
     color: #080808;
     padding: 8px;
 }
 
-.mc-form >input[type=checkbox]{
+.bc-form >input[type=checkbox]{
     transform: scale(1.5);
     margin-left: 5px;
 }
 
-.mc-form > input[type=file]{
+.bc-form > input[type=file]{
     color: black;
 }
 
@@ -335,7 +336,7 @@ textarea{
     color: #080808;
 }
 
-.mc-form > button{
+.bc-form > button{
     margin-top: 16px;
     background-color: white;
     color: #f593d1;
@@ -346,4 +347,9 @@ textarea{
     text-align: center;
     background-color: #f593d1;
     padding: 8px 0;
+}
+
+.bc-form-message{
+    color: #f593d1;
+    text-align: center;
 }
