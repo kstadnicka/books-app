@@ -1,4 +1,4 @@
-insert into book (title, author, publisher, release_year, promoted, category_id, description, short_description) values ('Quod erat demonstrandum', 'Patricia Tadlow', 'Harber-Hickle', 1996, true, 5, 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+insert into book (title, author, publisher, release_year, promoted, category_id, description, short_description, poster) values ('Quod erat demonstrandum', 'Patricia Tadlow', 'Harber-Hickle', 1996, true, 5, 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
 
 In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
 
@@ -14,7 +14,7 @@ Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, t
 
 Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
 
-Fusce consequat. Nulla nisl. Nunc nisl.', 'Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.');
+Fusce consequat. Nulla nisl. Nunc nisl.', 'Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.', '1154201-170x243.jpg');
 insert into book (title, author, publisher, release_year, promoted, category_id, description, short_description) values ('Substitute, The', 'Tori Gaymer', 'Christiansen-Kilback', 2005, false, 10, 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
 
 Sed ante. Vivamus tortor. Duis mattis egestas metus.
