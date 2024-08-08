@@ -2,13 +2,14 @@
 <html lang="pl"
       xmlns:th="https://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
       layout:decorate="~{layout}">
 <head>
-    <title th:if="${book}" th:text="|${book.title} - YourBooks|">Tytuł książki - Your Books</title>
+    <title th:text="|${book.title} - YourBooks|">Tytuł książki - Your Books</title>
 </head>
 <body>
 <div class="container">
-    <main th:if="${book}" class="main-content" layout:fragment="content">
+    <main class="main-content" layout:fragment="content">
         <section class="book">
             <div class="book-summary">
                 <img th:if="${book.poster != null}" th:src="@{/img/{poster}(poster=${book.poster})}" />
@@ -31,22 +32,27 @@
             </div>
             <div class="book-rating-container book-section">
                 <h2 class="book-section-heading">Ocena</h2>
-                <div>
-                    <p class="book-rating-value" th:text="${avgRating}"8.5</p>
-                    <p class="number-of-ratings" style="text-align: center">Liczba ocen: 215</p>
+                <p th:unless="${book.ratingCount}">Brak głosów</p>
+                <div th:if="${book.ratingCount}">
+                    <p class="book-rating-value" th:text="${#numbers.formatDecimal(book.avgRating, 1, 1)}">8.5</p>
+                    <p class="number-of-ratings" style="text-align: center" th:text="|Liczba ocen: ${book.ratingCount}|">Liczba ocen: 215</p>
                 </div>
-                <form action="#" class="book-rating-form">
+                <form action="#" th:action="@{/ocena-ksiazki}" method="post"
+                      sec:authorize="isAuthenticated()"
+                      class="book-rating-form">
                     <p>Twoja ocena</p>
-                    <input type="hidden" name="bookId">
+                    <input type="hidden" name="bookId" th:value="${book.id}">
                     <div class="book-rating-buttons">
-                        <button class="book-rating-button"><i class="fa-solid fa-star"></i></button>
-                        <button class="book-rating-button"><i class="fa-solid fa-star"></i></button>
-                        <button class="book-rating-button"><i class="fa-solid fa-star"></i></button>
-                        <button class="book-rating-button"><i class="fa-solid fa-star"></i></button>
-                        <button class="book-rating-button"><i class="fa-regular fa-star"></i></button>
+                        <button class="book-rating-button"
+                        name="rating"
+                        th:each="i: ${#numbers.sequence(1, 5)}"
+                        th:value="${i}">
+                            <i class="fa-star" th:classappend="${i <= userRating ? 'fa-solid' : 'fa-regular'}"></i>
+                        </button>
                     </div>
                 </form>
-                <p class="login"><a class="input" href="#">Zaloguj się</a>, aby oddać głos</p>
+                <p sec:authorize="!isAuthenticated()" class="login">
+                    <a href="#" th:href="@{/login}" class="input">Zaloguj się</a>, aby oddać głos</p>
             </div>
         </section>
         <section class="book-section">

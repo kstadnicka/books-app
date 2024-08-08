@@ -14,11 +14,13 @@ public class BookDto {
     private String category;
     private Boolean promoted;
     private String poster;
+    private double avgRating;
+    private int ratingCount;
 
-    public BookDto(Long id, String title, String author,
-                   String publisher, Integer releaseYear,
-                   String shortDescription, String description,
-                   String category, Boolean promoted, String poster) {
+    public BookDto(Long id, String title, String author, String publisher,
+                   Integer releaseYear, String shortDescription,
+                   String description, String category, Boolean promoted,
+                   String poster, double avgRating, int ratingCount) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -29,5 +31,8 @@ public class BookDto {
         this.category = category;
         this.promoted = promoted;
         this.poster = poster;
+        this.avgRating = avgRating;
+        this.ratingCount = ratingCount;
     }
+
 }
